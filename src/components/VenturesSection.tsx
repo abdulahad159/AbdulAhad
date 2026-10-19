@@ -79,7 +79,7 @@ export const VenturesSection: React.FC = () => {
                   : 'text-neutral-400 hover:text-neutral-200'
               }`}
             >
-              Platforms (3)
+              Platforms ({VENTURES.filter(v => v.category.includes('Platform')).length})
             </button>
           </div>
         </div>

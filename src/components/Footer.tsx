@@ -9,7 +9,6 @@ import {
   Building2, 
   Sparkles,
   Mail,
-  Phone,
   MessageSquare
 } from 'lucide-react';
 import { PERSONAL_INFO, SOCIAL_LINKS } from '../data/portfolioData';

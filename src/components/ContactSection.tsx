@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   Mail, 
-  Phone, 
   MessageSquare, 
   Send, 
   Copy, 
@@ -44,7 +43,15 @@ export const ContactSection: React.FC = () => {
     const text = encodeURIComponent(
       `Hi Abdul Ahad, I reached out via your portfolio website regarding: *${inquiryType}*.\n\nFrom: ${senderName || 'Visitor'}\nMessage: ${senderMessage || 'Let us discuss digital business and collaboration opportunities.'}`
     );
-    window.open(`https://wa.me/8801318608322?text=${text}`, '_blank');
+    const waBase = PERSONAL_INFO.whatsappUrl || 'https://wa.me/?text=Hello%20Abdul%20Ahad';
+    const separator = waBase.includes('?') ? '&' : '?';
+    const a = document.createElement('a');
+    a.href = `${waBase}${separator}text=${text}`;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
   };
 
   return (
@@ -65,8 +72,8 @@ export const ContactSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 4 Primary Direct Contact Action Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        {/* 3 Primary Direct Contact Action Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
           
           {/* Email Me Button */}
           <div className="bg-neutral-900/80 border border-neutral-800 hover:border-teal-500/50 rounded-2xl p-6 transition-all flex flex-col justify-between group shadow-sm">
@@ -95,37 +102,6 @@ export const ContactSection: React.FC = () => {
               className="mt-6 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-teal-500 hover:bg-teal-400 text-neutral-950 font-semibold text-xs transition-colors"
             >
               <span>Open Mail Client</span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-          </div>
-
-          {/* Call Me Button */}
-          <div className="bg-neutral-900/80 border border-neutral-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all flex flex-col justify-between group shadow-sm">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <button
-                  type="button"
-                  onClick={() => copyToClipboard(PERSONAL_INFO.phone, 'phone')}
-                  className="p-1.5 rounded-lg bg-neutral-950 text-neutral-400 hover:text-neutral-200 border border-neutral-800 text-xs"
-                  title="Copy phone number"
-                >
-                  {copiedField === 'phone' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-              </div>
-              <h3 className="font-display font-bold text-lg text-neutral-100">Call Me</h3>
-              <p className="text-xs text-neutral-400 mt-1 font-mono">
-                {PERSONAL_INFO.phoneFormatted}
-              </p>
-            </div>
-            <a
-              id="direct-btn-call"
-              href={`tel:${PERSONAL_INFO.phone}`}
-              className="mt-6 w-full inline-flex items-center justify-center gap-2 py-2.5 rounded-xl bg-neutral-800 hover:bg-neutral-700 text-neutral-100 font-semibold text-xs transition-colors border border-neutral-700"
-            >
-              <span>Dial Directly</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>

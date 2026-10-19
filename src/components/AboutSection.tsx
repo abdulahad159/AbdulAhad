@@ -1,7 +1,6 @@
 import React from 'react';
 import { Sparkles, GraduationCap, Building2, Cpu, Globe, Bot, Workflow, Megaphone, Video, Layers, CheckCircle2, ShieldCheck } from 'lucide-react';
-import { PERSONAL_INFO, INTERSECTION_TOPICS } from '../data/portfolioData';
-import portraitImg from '../assets/images/ahad_exact_portrait_1788020772663.jpg';
+import { PERSONAL_INFO, INTERSECTION_TOPICS, USER_IMAGE_URL } from '../data/portfolioData';
 
 export const AboutSection: React.FC = () => {
   const getTopicIcon = (title: string) => {
@@ -73,7 +72,7 @@ export const AboutSection: React.FC = () => {
             <div className="bg-neutral-900/70 border border-neutral-800 rounded-2xl p-5 flex items-center gap-4">
               <div className="relative w-16 h-16 rounded-xl overflow-hidden border border-teal-500/40 shrink-0 shadow-md">
                 <img 
-                  src={portraitImg} 
+                  src={USER_IMAGE_URL} 
                   alt="Abdul Ahad Portrait" 
                   className="w-full h-full object-cover object-top"
                 />

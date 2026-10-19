@@ -1,9 +1,8 @@
 import React from 'react';
 import { ArrowRight, MessageSquare, Sparkles, Building2, MapPin, Layers, ShieldCheck, ChevronDown } from 'lucide-react';
-import { PERSONAL_INFO } from '../data/portfolioData';
+import { PERSONAL_INFO, USER_IMAGE_URL } from '../data/portfolioData';
 import ParticleText from './ParticleText';
 import ProfileCard from './ProfileCard';
-import portraitImg from '../assets/images/ahad_exact_portrait_1788020772663.jpg';
 
 export const HeroSection: React.FC = () => {
   const handleScrollTo = (id: string) => {
@@ -123,7 +122,8 @@ export const HeroSection: React.FC = () => {
           {/* Right Column: React Bits ProfileCard with 3D Hologram Tilt & Portrait Image */}
           <div className="lg:col-span-5 flex flex-col items-center justify-center">
             <ProfileCard
-              avatarUrl={portraitImg}
+              avatarUrl={USER_IMAGE_URL}
+              miniAvatarUrl={USER_IMAGE_URL}
               name="Abdul Ahad"
               title="Founder & CEO | ART Group"
               handle="Abdul_Ahad7"

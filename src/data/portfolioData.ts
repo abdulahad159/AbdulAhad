@@ -1,5 +1,7 @@
 import { SocialLink, VentureItem, SkillItem, VisionPrinciple, LearningPillar, RoadmapPhase } from '../types';
 
+export const USER_IMAGE_URL = "https://i.postimg.cc/nz9hwNsb/file-00000000a18c8211bd6a070f8d96d813.png";
+
 export const PERSONAL_INFO = {
   name: "Abdul Ahad",
   titles: "Founder & CEO | Entrepreneur | Business Builder",
@@ -7,20 +9,21 @@ export const PERSONAL_INFO = {
   aboutShort: "Abdul Ahad is a Bangladeshi entrepreneur, business builder, and technology-focused founder who is passionate about starting new ventures, learning new skills, and building digital businesses that can solve real-world problems.",
   location: "Bangladesh",
   currentRole: "Founder & CEO at ART Group",
-  email: "abdulahad.onr1@gmail.com",
-  phone: "01318608322",
-  phoneFormatted: "+880 1318 608322",
-  whatsappUrl: "https://wa.me/8801318608322",
+  email: "abdulahad.officialorg@gmail.com",
+  phone: "",
+  phoneFormatted: "",
+  whatsappUrl: "https://wa.me/?text=Hello%20Abdul%20Ahad",
   mantra: "Learn. Build. Improve. Scale.",
-  brandStatement: "Founder & CEO | Entrepreneur | Business Builder"
+  brandStatement: "Founder & CEO | Entrepreneur | Business Builder",
+  avatarUrl: USER_IMAGE_URL
 };
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: 'whatsapp',
     name: 'WhatsApp',
-    url: 'https://wa.me/8801318608322',
-    displayValue: '+880 1318 608322',
+    url: 'https://wa.me/?text=Hello%20Abdul%20Ahad',
+    displayValue: 'Available on Request',
     category: 'direct',
     icon: 'MessageSquare',
     description: 'Instant direct messaging for business inquiries and quick discussions.',
@@ -29,21 +32,11 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     id: 'email',
     name: 'Email Me',
-    url: 'mailto:abdulahad.onr1@gmail.com',
-    displayValue: 'abdulahad.onr1@gmail.com',
+    url: 'mailto:abdulahad.officialorg@gmail.com',
+    displayValue: 'abdulahad.officialorg@gmail.com',
     category: 'direct',
     icon: 'Mail',
     description: 'Direct email for collaborations, strategic partnerships, and proposals.',
-    isPrimary: true
-  },
-  {
-    id: 'phone',
-    name: 'Direct Call',
-    url: 'tel:01318608322',
-    displayValue: '01318608322',
-    category: 'direct',
-    icon: 'Phone',
-    description: 'Direct cellular voice contact for urgent communications.',
     isPrimary: true
   },
   {
@@ -228,22 +221,6 @@ export const VENTURES: VentureItem[] = [
       'Order status dashboard',
       'API connectivity',
       'Client support interface'
-    ]
-  },
-  {
-    id: 'techfinyx-earn',
-    name: 'TechFinyx Earn',
-    category: 'Digital Platform',
-    badge: 'Digital Platform Venture',
-    isMajorFocus: false,
-    description: 'TechFinyx Earn reflects Abdul Ahad\'s interest in developing online platforms and digital products.',
-    role: 'Earning & Digital Rewards Concept',
-    accentColor: 'cyan',
-    features: [
-      'Digital product delivery',
-      'Reward and task mechanisms',
-      'User account management',
-      'Interactive participation tracking'
     ]
   }
 ];

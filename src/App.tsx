@@ -2,18 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
-import { VisionSection } from './components/VisionSection';
-import { ArtGroupSection } from './components/ArtGroupSection';
 import { VenturesSection } from './components/VenturesSection';
 import { SkillsSection } from './components/SkillsSection';
-import { LeadershipSection } from './components/LeadershipSection';
-import { LearningSection } from './components/LearningSection';
-import { RoadmapSection } from './components/RoadmapSection';
-import { PersonalBrandSection } from './components/PersonalBrandSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import GlowCursor from './components/GlowCursor';
-import { MessageSquare, ArrowUp, Send, Mail } from 'lucide-react';
+import { MessageSquare, Mail } from 'lucide-react';
 import { PERSONAL_INFO } from './data/portfolioData';
 
 export default function App() {
@@ -24,14 +18,8 @@ export default function App() {
     const sectionIds = [
       'hero',
       'about',
-      'vision',
-      'art-group',
       'ventures',
       'skills',
-      'leadership',
-      'learning',
-      'roadmap',
-      'personal-brand',
       'contact'
     ];
 
@@ -85,18 +73,12 @@ export default function App() {
       {/* Sticky Navigation Header */}
       <Navbar activeSection={activeSection} />
 
-      {/* Main Content Sections */}
+      {/* Main Content Sections: Home, About, Ventures, Skills, Contact */}
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <VisionSection />
-        <ArtGroupSection />
         <VenturesSection />
         <SkillsSection />
-        <LeadershipSection />
-        <LearningSection />
-        <RoadmapSection />
-        <PersonalBrandSection />
         <ContactSection />
       </main>
 

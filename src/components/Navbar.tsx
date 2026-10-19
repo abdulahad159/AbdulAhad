@@ -21,13 +21,8 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
   const navItems = [
     { label: 'Home', href: '#hero' },
     { label: 'About', href: '#about' },
-    { label: 'Vision', href: '#vision' },
-    { label: 'ART Group', href: '#art-group' },
     { label: 'Ventures', href: '#ventures' },
     { label: 'Skills', href: '#skills' },
-    { label: 'Leadership', href: '#leadership' },
-    { label: 'Learning', href: '#learning' },
-    { label: 'Roadmap', href: '#roadmap' },
     { label: 'Contact', href: '#contact' },
   ];
 
